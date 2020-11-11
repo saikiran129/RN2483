@@ -1,0 +1,6 @@
+There are 2 microcontrollers A and B, with RN2483 LoRaWAN modules. In order for these microcontrollers to use this module, a driver named "RN2483_Driver.c" is created.
+This driver has APIs for initializing the module, transmitting the data, receiving the data.
+Two files, namely, transmitter.c and receiver.c are created that illustrate how transmitter and receiver can use the driver to transmit and receive data respectively.
+The driver mainly focuses on "Radio commands". MAC commands have not yet been included in the driver.
+The transmitter pin of Microcontroller A must be connected to receiver pin of RN2483 and vice-versa. The same is to be done to the Microcontroller B. With the help of the APIs, any of the microcontrollers can be used as transmitter and other can be used as receiver.
+All the commands must be sent from the microcontroller to the RN2483 via UART.
